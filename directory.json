@@ -1,0 +1,69 @@
+[
+
+	{	"Name" : "Atta",
+		"Office" : "Mezzanine of West Basic",
+		"Courses" : "Biochemistry",
+		"Filter" : "atta biochem biochemistry"
+	},
+	{	"Name" : "Austin",
+		"Office" : "Basement of West Basic",
+		"Courses" : "Anatomy",
+		"Filter" : "austin anatomy"
+	},
+	{	"Name" : "Chirwa",
+		"Office" : "Third floor of West Basic",
+		"Courses" : "Neuroscience",
+		"Filter" : "chirwa neuroscience"
+	},
+	{	"Name" : "Clark",
+		"Office": "Third floor of West Basic",
+		"Courses" : "Anatomy, FHDT, Neuroscience",
+		"Filter" : "clark anatomy fhdt neuroscience"
+	},
+	{	"Name" : "DeRiemer",
+		"Office" : "Third floor of West Basic",
+		"Courses" : "Anatomy, FHDT, Neuroscience",
+		"Filter" : "deriemer anatomy fhdt neuroscience"
+	},
+	{	"Name" : "Freund",
+		"Office" : "Second floor of West Basic",
+		"Courses" : "Biochemistry, Principles and Practices of Research (PPR)",
+		"Filter" : "freund biochemistry ppr research"
+	},
+	{	"Name" : "Hill",
+		"Office" : "West Basic Somewhere",
+		"Courses" : "Microbiology",
+		"Filter" : "hill microbiology"
+	},
+	{	"Name" : "Holt",
+		"Office" : "West Basic Somewhere",
+		"Courses" : "Microbiology",
+		"Filter" : "holt microbiology"
+	},
+	{	"Name" : "Jackson",
+		"Office" : "Basement of West Basic",
+		"Courses" : "Anatomy, FHDT, Neuroscience",
+		"Filter" : "jackson anatomy fhdt neuroscience"
+	},
+	{	"Name" : "Lima",
+		"Office" : "Mezzanine of West Basic",
+		"Courses" : "Immunology, Microbiology",
+		"Filter" : "lima immunology microbiology"
+	},
+	{	"Name" : "Nyanda",
+		"Office" : "Third floor of West Basic",
+		"Courses" : "Neuroscience",
+		"Filter" : "nyanda neuroscience"
+	},
+	{	"Name" : "Sander",
+		"Office" : "Third floor of West Basic",
+		"Courses" : "Principles and Practices of Medicine (PPM)",
+		"Filter" : "sander ppm"
+	},
+	{	"Name" : "Webster",
+		"Office" : "Hospital Somewhere",
+		"Courses" : "Principles and Practices of Medicine (PPM)",
+		"Filter" : "webster ppm"
+	}
+	
+]

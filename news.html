@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Meharry News</title>
+<link href="mmcapp.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/classie.js"></script>
+<script type="text/javascript">
+    google.load("feeds", "1");
+	function init() {}
+	
+	function rssInitialize() {
+        var feed = new google.feeds.Feed('http://pulsemmc.wordpress.com/feed/'); // change the feed url 
+        var rssoutput = ""; //I'm sending this back to the div
+		feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+        feed.setNumEntries(10);
+        feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("newsContent");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var mediaEntries = entry.xmlNode.getElementsByTagNameNS('*','thumbnail');
+            for (var j = 0; j < mediaEntries.length; j++) {
+                var mediaEntry = mediaEntries[j]; // This is the media:thumbnail item
+                var mediaThumbnailUrl = mediaEntry.attributes.getNamedItem('url').value; // Just the url				
+				rssoutput += "<div class='newsItem'><a href="+entry.link+"><div class='newsItemContent'><h1>"+ entry.title +"</h1><h2>"+ entry.publishedDate +"</h2><h6>"+ entry.author +"</h6><p>"+ entry.content +"</p></div><div class='newsItemContent'><img href="+entry.link+" width='100%' src="+ mediaThumbnailUrl+"></div></a></div>";
+            }
+			container.innerHTML = rssoutput;
+          }
+        }
+      });
+    }
+	
+	
+    window.onload = init();
+	google.setOnLoadCallback(rssInitialize);
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+        <header style="height:50px; background-color:#9E005D;">
+            	<h1 class="sectionHeaderTitle">NEWS</h1>      
+                <a href="./index.html"><img id="sectionLogo" src="images/mmclogo-01.png" /></a>
+                <div id="menuButton" onClick="menuOpen()">
+                	<div class="menuButtonDiv"></div>
+                    <div class="menuButtonDivB"></div>
+                </div>
+        </header>
+<div id="subMain">
+
+		<nav>
+            
+        </nav>
+
+
+        <div id="content">
+        
+        <section>
+                <div class="container" id="newsContent">
+                	        
+                </div>
+            </section>
+        
+            <!-- <section id="maps">
+            	<div class="sectionTitle" style="background-image:url(images/maps.jpg);">
+                	<div class="color" style="background-color:#22B573;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Maps</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	
+                </div>
+            </section>
+            
+            <section id="calendar">
+            	<div class="sectionTitle" style="background-image:url(images/header-academic-calendar-ss-59653657-788x360.jpg);">
+                	<div class="color" style="background-color:#29ABE2;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Calendar</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	
+                </div>
+            </section>
+            
+            <section id="directory">
+            	<div class="sectionTitle" style="background-image:url(images/header-academic-calendar-ss-59653657-788x360.jpg);">
+                	<div class="color" style="background-color:#93278F;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Directory</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	
+                </div>
+            </section>
+            
+            <section id="alumni">
+            	<div class="sectionTitle" style="background-image:url(images/DSC05904.jpg);">
+                	<div class="color" style="background-color:#FCEE21;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Alumni</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                </div>
+            </section>-->
+            
+        </div><!-- content -->
+</div><!-- main -->       
+        <footer style="background-color:#9E005D;">
+        	brought to you by c/o 2015 and NoC
+        </footer>
+
+</div><!-- wrapper -->
+</body>
+</html>
+

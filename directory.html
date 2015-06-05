@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="ui-mobile">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jqm-demos.css">
+	<link href="mmcapp.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	
+	<style>
+		div.marginate {
+			padding: 20px;
+		}
+	
+	</style>
+	
+	<script>
+		
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOn = 300,
+					header = document.querySelector("header");
+				if (distanceY > shrinkOn) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+			});
+		}
+		window.onload = init();
+	
+	</script>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+	
+	<div data-role="page" data-control-title="Directory" data-theme="a" id="directory">
+		
+		<div data-role="panel" id="panel" data-position="right" data-display="overlay">
+			<ul data-role="listview">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="social.html">Social</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</div>
+	
+		<div data-role="header">
+       		<div id="custom-border-radius">
+       			<a href="#panel" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+       		</div>
+       		<h1>MMC App</h1>
+       </div>
+       
+		<div class="sectionTitle" style="background-image:url(images/header-academic-calendar-ss-59653657-788x360.jpg);">
+      		<div class="color" style="background-color:#93278F;"></div>
+            	<div class="colorText">
+                	<h1 align="center">Directory</h1>
+            	</div>    
+        </div>
+        
+        <div class="marginate">
+	        <h3 id="headerthree">Search by last name of faculty or by course subject.</h3>
+	        
+	        <form>
+	        	<input data-type="search" id="searchForCollapsibleSetChildren" placeholder="Search Meharry Directory">
+	        </form>
+	        
+	        <div data-role="collapsibleset" data-filter="true" id="collapsiblesetforFilterChildren" data-input="#searchForCollapsibleSetChildren" data-children="> div, > div div ul li a" class="ui-collapsible-inset padding">
+	        	         
+	        </div>
+        
+        </div>
+        
+    </div>
+    
+    <script>
+    
+    	$("#directory").bind("pagebeforecreate", function(e) {
+    	     // load in our people
+    	     $.get("directory.json", {}, function(res, code) {
+    	          var out = "";
+    	          for (var i = 0; i < res.length; i++) {
+    	               out += "<div data-role='collapsible' data-filtertext='" + res[i].Filter +
+    	               		"'> <h3>" + res[i].Name + "</h3> <p>Office: " + res[i].Office + 
+    	               		"</p> <p>Course(s): " + res[i].Courses + "</p> </div>";
+    	          }
+    	          $("#collapsiblesetforFilterChildren").html(out).collapsibleset("refresh");
+    	          }, "json");
+    	 });
+
+    </script>
+
+</body>
+
+</html>
