@@ -228,13 +228,13 @@ div.ui-mobile-viewport {
 }
 /* Buttons and icons */
 .ui-btn {
-	font-size: 0.7em;
+	font-size: 0.65em;
 	margin: .5em 0;
-	padding: .7em 1em;
+	padding: .6em 1em;
 	display: block;
 	position: relative;
 	text-align: center;
-	text-overflow: ellipsis;
+	text-overflow: none;
 	overflow: hidden;
 	white-space: nowrap;
 	cursor: pointer;
@@ -3433,17 +3433,5 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;
-}
-
-.mainButton
-{
-	border-width: 4px;
-	 border-color: rgb(255, 255, 255);
-	 border-style: solid;
-	 border-radius: 50%;
-	 background-color: rgb(97, 23, 45);
-	 width: 128px;
-	 height: 128px;
-	 z-index: 1;
 }
 
