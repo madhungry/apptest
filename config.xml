@@ -2,9 +2,9 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
 
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.northofcharlotte.mmc"
-        version     = "1.0.0"
-        versionCode = "10" >
+        id          = "com.mmc.meharrymobile"
+        version     = "0.1.0"
+        versionCode = "1" >
 
         <!-- versionCode is optional and Android only -->
 
@@ -13,14 +13,14 @@
         <name>MMC</name>
 
         <description>
-        An example for phonegap build docs. 
+        Meharry Mobile 
         </description>
 
-        <author href="http://yoursite.com" email="dr.marshalla@gmail.com">
-        Andrew Marshall
+        <author>
+        Meharry App Team
         </author>
 		
 		<icon src="icon.png" />
-		<gap:splash src="splash.png" />
+		<gap:splash src="" />
 
     </widget>

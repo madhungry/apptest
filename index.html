@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
-    <link rel="stylesheet" href="css/jqm-demos.css">
+    <link rel="stylesheet" href="themes/meharry.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css">
 	<link href="mmcapp.css" rel="stylesheet" type="text/css">
 	<script src="js/jquery.min.js"></script>
     <script src="js/index.js"></script>
@@ -14,47 +15,217 @@
 </head>
 
 <body>
+	<style type="text/css">
+	
+		.ui-icon-news {
+			background-image: url("images/icons/invertnews.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-social {
+			background-image: url("images/icons/invertsocial.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-blackboard {
+			background-image: url("images/icons/blackboard.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-directions {
+			background-image: url("images/icons/invertdirections.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-12south {
+			background-image: url("images/icons/invert12south.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-directory {
+			background-image: url("images/icons/invertdirectory.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-studentlife {
+			background-image: url("images/icons/invertstudentlife.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-calendar {
+			background-image: url("images/icons/invertcalendar.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-dentistry {
+			background-image: url("images/icons/invertdentistry.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-medicine {
+			background-image: url("images/icons/invertmedicine.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-graduate {
+			background-image: url("images/icons/invertgraduate.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-policy {
+			background-image: url("images/icons/invertpolicy.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-library {
+			background-image: url("images/icons/invertlibrary.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-alumni {
+			background-image: url("images/icons/alumni.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-security {
+			background-image: url("images/icons/invertsecurity.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+		.ui-icon-about {
+			background-image: url("images/icons/invertabout.png");
+			background-repeat: no-repeat;
+			background-position: 50% 20%;
+			background-color: rgba(0, 0, 0 , 0);
+			!important;
+		}
+	
+	</style>
 	
 	<div data-role="page" data-control-title="Home" data-theme="a" id="home">
-    <header data-role="header">
-    	<h1 id="logo">Meharry Mobile</h1>
-    </header>
-      <div data-role="content" class="container">
-          <div class="ui-grid-b">
+          <div data-role="header">
+       		<h1>Meharry Mobile</h1>
+    	  </div>
+    	  <img src="images/pulsecoatbanner.jpg" style="width:100%; height:100%;">
+       <div data-role="content">   
+          <hr style="height:3px; background-color:#ccc; border:0; margin-top:-10px; margin-bottom:12px;"/>
+          <div class="ui-grid-c">
               <div class="ui-block-a">
-                  <a class="mainButton" id="newsButton" data-role="button" data-icon="comment" data-iconpos="top" rel="external" href="news.html" >
+                  <a class="ui-btn ui-corner-all ui-icon-news ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="newsButton" rel="external" href="news.html">
                       News<br> 
                   </a>
               </div>
               <div class="ui-block-b">
-                  <a class="mainButton" id="socialMediaButton" data-role="button" data-icon="camera" data-iconpos="top" rel="external" href="social.html">
+                  <a class="ui-btn ui-corner-all ui-icon-social ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em"" id="socialMediaButton" rel="external" href="social.html">
                       Social
                   </a>
               </div>
               <div class="ui-block-c">
-                  <a class="mainButton" id="directoryButton" data-role="button" data-icon="search" data-iconpos="top" rel="external" href="directory.html">
-                      Directory<br> 
+                  <a class="ui-btn ui-corner-all ui-icon-blackboard ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="directoryButton" rel="external" href="http://mmcblackboard.mmc.edu">
+                      Blackboard<br> 
+                  </a>
+              </div>
+              <div class="ui-block-d">
+                  <a class="ui-btn ui-corner-all ui-icon-directions ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="directionsButton" rel="external" href="directions.html">
+                      Directions<br> 
                   </a>
               </div>
           </div>
-          <div class="ui-grid-b">
+          <div class="ui-grid-c">
               <div class="ui-block-a">
-                   
+                  <a class="ui-btn ui-corner-all ui-icon-12south ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="12southButton" rel="external" href="12south.html">
+                      12 South<br> 
+                  </a>
               </div>
               <div class="ui-block-b">
-                  <a class="mainButton" id="aboutButton" data-role="button" data-icon="info" data-iconpos="top" href="about.html">
-                      About<br> 
+                  <a class="ui-btn ui-corner-all ui-icon-directory ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="directoryButton" rel="external" href="directory.html">
+                      Directory
                   </a>
               </div>
               <div class="ui-block-c">
-                
+                  <a class="ui-btn ui-corner-all ui-icon-studentlife ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="studentLifeButton" rel="external" href="studentlife.html">
+                      Student Life<br> 
+                  </a>
               </div>
-             </div>
-             
-              
-              <footer data-role="footer" data-position="fixed">
-              	<img height="75" src="images/mmc-full-01.png" />
-              </footer>
+              <div class="ui-block-d">
+                  <a class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="calendarButton" rel="external" href="calendar.html">
+                      Calendar<br> 
+                  </a>
+              </div>
+          </div>
+          <div class="ui-grid-c">
+              <div class="ui-block-a">
+                  <a class="ui-btn ui-corner-all ui-icon-dentistry ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="dentistryButton" rel="external" href="https://www.mmc.edu/education/sod/">
+                      Dentistry<br> 
+                  </a>
+              </div>
+              <div class="ui-block-b">
+                  <a class="ui-btn ui-corner-all ui-icon-medicine ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="medicineButton" rel="external" href="https://www.mmc.edu/education/som/">
+                      Medicine
+                  </a>
+              </div>
+              <div class="ui-block-c">
+                  <a class="ui-btn ui-corner-all ui-icon-graduate ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="graduateButton" rel="external" href="https://www.mmc.edu/education/sogsr/">
+                      Graduate<br> 
+                  </a>
+              </div>
+              <div class="ui-block-d">
+                  <a class="ui-btn ui-corner-all ui-icon-policy ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="policyButton" rel="external" href="#">
+                      Public Policy<br> 
+                  </a>
+              </div>
+          </div>
+          <div class="ui-grid-c">
+              <div class="ui-block-a">
+                  <a class="ui-btn ui-corner-all ui-icon-library ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="libraryButton" rel="external" href="library.html">
+                      Library<br> 
+                  </a>
+              </div>
+              <div class="ui-block-b">
+                  <a class="ui-btn ui-corner-all ui-icon-alumni ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="alumniButton" rel="external" href="alumni.html">
+                      Alumni
+                  </a>
+              </div>
+              <div class="ui-block-c">
+                  <a class="ui-btn ui-corner-all ui-icon-security ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="securityButton" rel="external" href="security.html">
+                      Security<br> 
+                  </a>
+              </div>
+              <div class="ui-block-d">
+                  <a class="ui-btn ui-corner-all ui-icon-about ui-btn-icon-top ui-nodisc-icon" style="padding-top: 4em" id="aboutButton" rel="external" href="about.html">
+                      About<br> 
+                  </a>
+              </div>
           </div>
       </div>
 
